@@ -45,6 +45,24 @@ public final class Check {
         }
     }
 
+    public static void state(boolean expression) {
+        if (!expression) {
+            throw new IllegalStateException();
+        }
+    }
+
+    public static void state(boolean expression, String message) {
+        if (!expression) {
+            throw new IllegalStateException(message);
+        }
+    }
+
+    public static void state(boolean expression, Supplier<String> messageSupplier) {
+        if (!expression) {
+            throw new IllegalStateException(messageSupplier == null ? null : messageSupplier.get());
+        }
+    }
+
     public static int index(int index, int length) {
         if (index < 0 || index >= length) {
             throw new IndexOutOfBoundsException(String.format("Index %s out of bounds for length %s", index, length));
