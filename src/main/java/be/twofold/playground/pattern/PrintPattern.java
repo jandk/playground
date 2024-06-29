@@ -35,7 +35,7 @@ class PrintPattern {
     }
 
     private static String toStringCP(int cp) {
-        return (be.twofold.playground.pattern.ASCII.isPrint(cp) ? "" + (char) cp
+        return (ASCII.isPrint(cp) ? "" + (char) cp
             : "\\u" + Integer.toString(cp, 16));
     }
 

@@ -180,7 +180,7 @@ public class EasyDI {
     }
 
     /**
-     * This method is used to define a {@link jakarta.inject.Provider} for a given type.
+     * This method is used to define a {@link Provider} for a given type.
      * <p>
      * The type can either be an interface or class type. This is a good way to integrate
      * third-party classes that aren't suitable for injection by default (i.e. have no public constructor...).
@@ -189,8 +189,8 @@ public class EasyDI {
      * injection.
      * <p>
      * <p>
-     * Providers can be combined with {@link jakarta.inject.Singleton}'s.
-     * When a type is marked as singleton (has the annotation {@link jakarta.inject.Singleton}) and there is a provider
+     * Providers can be combined with {@link Singleton}'s.
+     * When a type is marked as singleton (has the annotation {@link Singleton}) and there is a provider
      * defined for this type, then this provider will only be executed exactly one time when the type is requested the
      * first time.
      *
@@ -223,7 +223,7 @@ public class EasyDI {
     /**
      * This method can be used to mark a class as singleton.
      * <p>
-     * It is an alternative for situations when you can't use the {@link jakarta.inject.Singleton} annotation.
+     * It is an alternative for situations when you can't use the {@link Singleton} annotation.
      * For example when you want a class from a third-party library to be a singleton.
      * <p>
      * It is not possible to mark interfaces as singleton.
@@ -253,7 +253,7 @@ public class EasyDI {
 
 
     /**
-     * This method is used to create a {@link jakarta.inject.Provider} instance when such a provider
+     * This method is used to create a {@link Provider} instance when such a provider
      * is declared as constructor parameter.
      *
      * @param param         the parameter declared by the constructor
@@ -307,7 +307,7 @@ public class EasyDI {
      * <p>
      * If there is only one public constructor, it will be used.
      * <p>
-     * If there are more then one public constructors, the one with an {@link jakarta.inject.Inject}
+     * If there are more then one public constructors, the one with an {@link Inject}
      * annotation is used.
      * <p>
      * <p>
